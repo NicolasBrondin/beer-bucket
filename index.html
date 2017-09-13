@@ -9,7 +9,7 @@
         <section id="jumbo">
             <img id="logo" src="logo.png" height="100"/>
             <div class="coin"></div>
-            <h1>Wanna <span class="text-red">thanks</span> someone who helped you with a <span class="text-red">BeerCoin</span>? 
+            <h1>Wanna <span class="text-red"><a href="#send">thanks</a></span> someone who helped you with a <span class="text-red"><a href="#definition">BeerCoin</a></span>? 
                 <br><strong>You're at the right place!</strong></h1>
             <a href="#send">
             <svg id="arrow-down" viewBox="-282 405.9 52.1 31" >
@@ -19,16 +19,17 @@
             </svg>
                 </a>
         </section>
+        <div class="separator"></div>
         <section id="send">
             <h2>I am...</h2>
             <div>
                 <input id="email-from" name="email-from" type="text" required />
-                <label for="email-from">Email</label>
+                <label for="email-from">email</label>
             </div>
             <h2>and I want to send to...</h2>
             <div>
                 <input id="email-to" name="email-to" type="text" required />
-                <label for="email-to">Email</label>
+                <label for="email-to">email</label>
             </div>
             <div id="coins" style="width:500px;">
                 <button onclick="remove_coin()" id="less">-</button><button class="coin"></button><button onclick="add_coin()" id="plus">+</button>
@@ -38,6 +39,14 @@
 
             <button class="send">Send</button>
         </section>
+        <div class="separator"></div>
+        <section id="definition">
+        </section>
+        <div class="separator"></div>
+        <footer>
+            Made in Loire Valley with <span class="text-red">♥</span> © BeerBucket 2017
+        </footer>
+        <!--
         <section >
             <div id="beer-bucket">
                 <div class="coin animated"></div>
@@ -51,7 +60,7 @@
                 </div>
             </div>
         </section>
-        
+        -->
         <script type="text/javascript">
             var count = 1;
             function add_coin(){
