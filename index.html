@@ -8,7 +8,7 @@
     <body>
         <section id="jumbo">
             <img id="logo" src="logo.png" height="100"/>
-            <div id="coin"></div>
+            <div class="coin"></div>
             <h1>Wanna <span class="text-red">thanks</span> someone who helped you with a <span class="text-red">BeerCoin</span>? 
                 <br><strong>You're at the right place!</strong></h1>
             <a href="#send">
@@ -30,17 +30,19 @@
                 <input id="email-to" name="email-to" type="text" required />
                 <label for="email-to">Email</label>
             </div>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <h2>BeerCoins !</h2>
-            <button>Envoyer</button>
+            <div id="coins" style="width:400px;">
+                <button class="coin"></button>
+            </div>
+            
+            <h2><span id="beercoin_count">1</span> BeerCoin(s)!</h2>
+            <div style="padding:50px;">
+                <button onclick="add_coin()" id="plus">+</button>
+            </div>
+            <button class="send">Send</button>
         </section>
         <section >
             <div id="beer-bucket">
-                <div id="coin" class="animated"></div>
+                <div class="coin animated"></div>
                 <div id="glass">
                     <div id="liquid-container">
                         <div id="liquid">
@@ -51,5 +53,19 @@
                 </div>
             </div>
         </section>
+        
+        <script type="text/javascript">
+            var count = 1;
+            function add_coin(){
+                if(count < 10){
+                    count++;
+                    var coin = document.createElement('button');
+                    coin.classList =  "coin";
+                    document.getElementById('coins').appendChild(coin);
+                    document.getElementById('beercoin_count').innerHTML = count;
+                }
+            }
+        
+        </script>
     </body>
 </html>
