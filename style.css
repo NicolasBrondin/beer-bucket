@@ -3,6 +3,7 @@ html, body {
     text-align: center;
     padding: 0;
         margin:0;
+    font-family: Roboto;
 }
 
 #beer-bucket {
@@ -158,7 +159,7 @@ section#jumbo h1{
     color:white;
     text-align: center;
     font-size: 60px;
-    font-family: Arial;
+    font-family: Roboto;
     margin-top: 210px;
     padding-left: 20%;
     padding-right: 20%;
@@ -186,10 +187,7 @@ strong {
 
 div { position: relative; } 
 
-input { position:relative; background: none; z-index:5;margin-top:16px;}
-label { font-size:20px;position: absolute; top: 16px;  left: 0; width: 100%; transition: 0.2s; } 
 
-input:focus+label, input:valid+label{ font-size:8px; color: red; top:0; transition: 0.2s;}
 
 @keyframes input {
     0% {width: 300px}
@@ -200,17 +198,43 @@ input:focus+label, input:valid+label{ font-size:8px; color: red; top:0; transiti
 }
 
 input{
+    position:relative; 
+    background: white; 
+    margin-top:60px;
      border: none;
-    border-bottom: 2px dashed white;
-    background: none;
+    //border-bottom: 2px dashed white;
     width: 300px;
     font-family: Roboto;
-    color: white;
+    color: black;
     font-size: 30px;
     animation-name: none;
+    height: 60px;
+    width: 500px;
 }
 
 input:focus{
-    animation-name: input;
-    animation-duration: 0.5s;
+    //animation-name: input;
+    //animation-duration: 0.5s;
+}
+
+
+label { 
+    display: inline-block;
+    font-size:40px;
+    position: absolute; 
+    top: 60px;  
+    left: 0; 
+    width: 100%; 
+    transition: 0.2s; 
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px;
+    color: lightgrey;
+} 
+
+input:focus+label, input:valid+label { 
+    font-size:30px; 
+    color: white; 
+    top:0; 
+    transition: 0.2s;
 }
