@@ -30,14 +30,12 @@
                 <input id="email-to" name="email-to" type="text" required />
                 <label for="email-to">Email</label>
             </div>
-            <div id="coins" style="width:400px;">
-                <button class="coin"></button>
+            <div id="coins" style="width:500px;">
+                <button onclick="remove_coin()" id="less">-</button><button class="coin"></button><button onclick="add_coin()" id="plus">+</button>
             </div>
             
             <h2><span id="beercoin_count">1</span> BeerCoin(s)!</h2>
-            <div style="padding:50px;">
-                <button onclick="add_coin()" id="plus">+</button>
-            </div>
+
             <button class="send">Send</button>
         </section>
         <section >
@@ -61,7 +59,15 @@
                     count++;
                     var coin = document.createElement('button');
                     coin.classList =  "coin";
-                    document.getElementById('coins').appendChild(coin);
+                    document.getElementById('coins').insertBefore(coin, document.getElementById('plus'));
+                    document.getElementById('beercoin_count').innerHTML = count;
+                }
+            }
+            
+            function remove_coin(){
+                if(count > 1){
+                    count--;
+                    document.getElementById('coins').removeChild(document.querySelector('#send .coin'));
                     document.getElementById('beercoin_count').innerHTML = count;
                 }
             }

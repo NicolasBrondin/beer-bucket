@@ -270,6 +270,7 @@ input:focus+label, input:valid+label {
     color: white; 
     top:0; 
     transition: 0.2s;
+    opacity: 0;
 }
 
 button.send{
@@ -299,19 +300,26 @@ button.send:hover{
 #coins .coin{
     margin-left: -15px;
     margin-right: -15px;
+    top:-10px;
 }
 
-#plus {
+#plus, #less {
     background: none;
-    border: 2px solid white;
-    width: 58px;
-    height: 58px;
-    border-radius: 39px;
-    color: white;
-    font-family: Roboto;
-    cursor: pointer;
-    font-size: 27px;
-    transition: linear 0.2s;
+border: 2px solid white;
+width: 51px;
+height: 61px;
+border-bottom-left-radius: 100% 100%;
+border-bottom-right-radius: 100% 100%;
+border-top-left-radius: 100% 100%;
+border-top-right-radius: 100% 100%;
+color: white;
+font-family: Roboto;
+cursor: pointer;
+font-size: 27px;
+transition: linear 0.2s;
+margin-left: 25px;
+margin-right: 25px;
+box-sizing: border-box;
 }
 
 #plus:hover{
