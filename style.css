@@ -111,34 +111,13 @@ html, body {
         animation-iteration-count: infinite;
 }
 
-@keyframes input {
-    0% {width: 300px}
-    25% {width:200px}
-    50% {width:275px}
-    75% {width:220px}
-    100% {width:300px}
-}
 
-input[type="email"]{
-     border: none;
-    border-bottom: 2px dashed white;
-    background: none;
-    width: 300px;
-    font-family: Roboto;
-    color: white;
-    font-size: 30px;
-    animation-name: none;
-}
-
-input[type="email"]:focus{
-    animation-name: input;
-    animation-duration: 0.5s;
-}
     
 section {
     width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
+    position: relative;
 }
 
 section#jumbo{
@@ -153,6 +132,7 @@ section#jumbo{
     text-align: center;
     padding-left: 50px;
 padding-top:50px;
+    padding-bottom: 100px;
         
 }
 
@@ -179,7 +159,7 @@ section#jumbo h1{
     text-align: center;
     font-size: 60px;
     font-family: Arial;
-    margin-top: 300px;
+    margin-top: 210px;
     padding-left: 20%;
     padding-right: 20%;
 }
@@ -193,4 +173,44 @@ section#jumbo h1{
     animation-name: bouncing;
     animation-duration: 1s;
     animation-iteration-count: infinite;
+}
+
+.text-red {
+    color: #c0392b;
+}
+
+strong {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+div { position: relative; } 
+
+input { position:relative; background: none; z-index:5;margin-top:16px;}
+label { font-size:20px;position: absolute; top: 16px;  left: 0; width: 100%; transition: 0.2s; } 
+
+input:focus+label, input:valid+label{ font-size:8px; color: red; top:0; transition: 0.2s;}
+
+@keyframes input {
+    0% {width: 300px}
+    25% {width:200px}
+    50% {width:275px}
+    75% {width:220px}
+    100% {width:300px}
+}
+
+input{
+     border: none;
+    border-bottom: 2px dashed white;
+    background: none;
+    width: 300px;
+    font-family: Roboto;
+    color: white;
+    font-size: 30px;
+    animation-name: none;
+}
+
+input:focus{
+    animation-name: input;
+    animation-duration: 0.5s;
 }
