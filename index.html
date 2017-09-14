@@ -6,6 +6,10 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
     </head>
     <body>
+        <section id="ie">
+            <div><img src="ie.jpg" /></div>
+                 
+        </section>
         <section id="jumbo">
             <img id="logo" src="logo.png" height="100"/>
             <div class="coin"></div>
@@ -41,6 +45,18 @@
         </section>
         <div class="separator"></div>
         <section id="definition">
+            <h1><strong>FAQ</strong></h1>
+            <h2>What is a beercoin?</h2>
+            <p>BeerCoin is a completely virtual money, you can send some to any of your friends completely for free. <br>
+                But be careful, even if it's free, when you send beercoins to someone, you instantly make a moral contract with that person and you will then owe that person the equivalent of the beercoins you sent in actual beer in your beloved pub!</p>
+            <h2>How much beer does a beercoin worth?</h2>
+            <p>Like any currency it depends on how much you drank before, but for now 1 BeerCoin = 10cl of Beer (1/5 of a pint).</p>
+            <h2>Is BeerCoin a cryptocurrency?</h2>
+            <p>No.</p>
+            <h2>Who are your partners?</h2>
+            <p>If you know a bar/pub which could be interested by a partnership with us, tell us !</p>
+            <h2>Are you on Facebook?</h2>
+            <p><a href="https://www.facebook.com/BeerBucket-130418697598109/">Yes.</a></p>
         </section>
         <div class="separator"></div>
         <footer>
@@ -62,9 +78,15 @@
         </section>
         -->
         <script type="text/javascript">
+            
+            if (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) {
+                // is IE11
+                document.getElementById('ie').style.display = 'block';
+            }
+            
             var count = 1;
             function add_coin(){
-                if(count < 10){
+                if(count < 5){
                     count++;
                     var coin = document.createElement('button');
                     coin.classList =  "coin";

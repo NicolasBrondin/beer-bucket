@@ -193,6 +193,16 @@ section#jumbo .coin {
     animation-timing-function: linear;
 }
 
+section h1{
+    color:white;
+    text-align: center;
+    font-size: 60px;
+    font-family: Roboto;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+
 section#jumbo h1{
     color:white;
     text-align: center;
@@ -376,4 +386,81 @@ footer {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
     position: relative;
     z-index: 2;
+}
+
+p {
+    color: white;
+    font-size: 26px;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+p a{
+    text-decoration: underline;
+}
+
+
+#ie {
+    display: none;
+    background: #202020;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+}
+
+@keyframes ie{
+    0% {  transform: rotate(10deg);
+        transform-origin: 200px -100px;}
+    50% {transform: rotate(-10deg);
+    transform-origin: 200px -100px;}
+    100% {  transform: rotate(10deg);
+        transform-origin: 200px -100px;}
+}
+
+#ie div {
+    border:15px solid #ffb736;
+    transform: rotate(-10deg);
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.5);
+    width:400px;
+    height:307px;
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    margin-top: 100px;
+    animation-name: ie;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out
+}
+
+#ie div::before{
+    content: "";
+    background: white;
+    position: absolute;
+    top:-77px;
+    left: 50px;
+    width:176px;
+    height: 2px;
+    transform: rotate(-45deg);
+    z-index: 0;
+    
+}
+
+#ie div::after{
+    content: "";
+    background: white;
+    position: absolute;
+    top:-77px;
+    right: 50px;
+    width:176px;
+    height: 2px;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+#ie div img{
+    width:100%;
+    
 }
