@@ -39,7 +39,7 @@ function send_beercoins(){
         request.onreadystatechange = function() {
           if(request.readyState === 4) {
             if(request.status === 200) { 
-                callback(JSON.parse(request.responseText));
+                JSON.parse(request.responseText);
                 send_button.innerHTML='Sent!';
                 send_error.innerHTML='';
             } else {
