@@ -41,7 +41,8 @@
             
             <h2><span id="beercoin_count">1</span> BeerCoin(s)!</h2>
 
-            <button class="send">Send</button>
+            <button id="send-button" class="send" onclick="send_beercoins()">Send</button>
+            <p id="send-error" class="text-red"></p>
         </section>
         <div class="separator"></div>
         <section id="definition">
@@ -56,7 +57,7 @@
             <h2>Who are your partners?</h2>
             <p>If you know a bar/pub which could be interested by a partnership with us, tell us !</p>
             <h2>Are you on Facebook?</h2>
-            <p><a href="https://www.facebook.com/BeerBucket-130418697598109/">Yes.</a></p>
+            <p><a href="https://www.facebook.com/BeerBucket-130418697598109/" target="_blank">Yes.</a></p>
         </section>
         <div class="separator"></div>
         <footer>
@@ -77,32 +78,6 @@
             </div>
         </section>
         -->
-        <script type="text/javascript">
-            
-            if (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject) {
-                // is IE11
-                document.getElementById('ie').style.display = 'block';
-            }
-            
-            var count = 1;
-            function add_coin(){
-                if(count < 5){
-                    count++;
-                    var coin = document.createElement('button');
-                    coin.classList =  "coin";
-                    document.getElementById('coins').insertBefore(coin, document.getElementById('plus'));
-                    document.getElementById('beercoin_count').innerHTML = count;
-                }
-            }
-            
-            function remove_coin(){
-                if(count > 1){
-                    count--;
-                    document.getElementById('coins').removeChild(document.querySelector('#send .coin'));
-                    document.getElementById('beercoin_count').innerHTML = count;
-                }
-            }
-        
-        </script>
+        <script type="text/javascript" src="app.js"></script>
     </body>
 </html>
