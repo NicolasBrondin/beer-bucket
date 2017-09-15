@@ -179,6 +179,7 @@ section#jumbo #logo{
     position: absolute;
     left:50px;
     top:50px;
+    height: 100px;
 }
 
 section#jumbo .coin {
@@ -209,8 +210,8 @@ section#jumbo h1{
     font-size: 60px;
     font-family: Roboto;
     margin-top: 210px;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
 }
 
@@ -466,3 +467,108 @@ p a{
     
 }
 
+@media (max-width:1024px) and (min-width:801px){
+        
+    
+section#jumbo{
+    background: url('back.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation-name: bubbles;
+    animation-duration: 600s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:100px;
+    padding-bottom: 100px;
+        
+}
+    
+    section#jumbo h1{
+        color:white;
+        text-align: center;
+        font-size: 42px;
+        font-family: Roboto;
+        margin: 0;
+        margin-top: 210px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    }
+    
+    
+section#jumbo #logo{
+    position: absolute;
+    left:50px;
+    top:50px;
+    height: 80px;
+}
+
+section#jumbo .coin {
+    position: absolute;
+    top: 72px;
+left: 390px;
+height: 20px;
+width: 21px;
+    animation-name: spinning;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+    
+
+}
+
+@media (max-width:800px){
+    
+section#jumbo{
+    background: url('back.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation-name: bubbles;
+    animation-duration: 600s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:100px;
+    padding-bottom: 100px;
+        
+}
+    
+    section#jumbo h1{
+        color:white;
+        text-align: center;
+        font-size: 30px;
+        font-family: Roboto;
+        margin: 0;
+        margin-top: 210px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    }
+    
+    
+section#jumbo #logo{
+    position: absolute;
+    left:50px;
+    top:50px;
+    height: 50px;
+}
+
+section#jumbo .coin {
+    position: absolute;
+ top: 63px;
+left: 258px;
+height: 15px;
+width: 10px;
+    animation-name: spinning;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+}
