@@ -467,6 +467,69 @@ p a{
     
 }
 
+@keyframes slipping {
+    0% {top:0px;}
+    40% {top:0px;}
+    60%{top:81px;}
+    100%{top:81px;}
+}
+
+@keyframes sending {
+    0% {margin-left: calc( -100% - 400px);}
+    40% {margin-left: 0;}
+    60%{margin-left: 0;}
+    100% {margin-left: calc( 100% + 200px);}
+}
+
+
+.email-wrapper {
+    position: relative;
+    height: 216px;
+    width:200px;
+    display: inline-block;
+    animation-name: sending;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    margin-left: calc( -100% - 400px);
+}
+
+.email-front {
+    position: absolute;
+    z-index: 3;
+    background-image: url('mail-front.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width:100%;
+    height:135px;
+    top:80px;
+    
+}
+
+.email-paper {
+    position: absolute;
+    z-index: 2;
+    background-image: url('mail-paper.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 157px;
+    height: 152px;
+    top: 81px;
+    left: 21px;
+    animation-name: slipping;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+.email-back {
+    position: absolute;
+    z-index: 1;
+    background-image: url('mail-back.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width:100%;
+    height:152px;
+}
+
 @media (max-width:1024px) and (min-width:801px){
         
     
