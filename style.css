@@ -537,6 +537,7 @@ p a{
 }
 
 section#validation {
+    display: none;
     background: #2ecc71;
     background-image: url('emails.png');
     background-repeat: repeat;

@@ -22,6 +22,22 @@ function remove_coin(){
     }
 }
 
+function show_form(){
+    document.getElementById('validation').style.display = 'none';
+    document.getElementById('send').style.display = 'block';
+    var send_button = document.getElementById('send-button').innerHTML = 'Send';
+    var email_from = document.getElementById('email-from').value = "";
+    var email_to = document.getElementById('email-to').value = "";
+    window.location.hash='send';
+}
+
+function show_success(){
+    
+    document.getElementById('send').style.display = 'none';
+    document.getElementById('validation').style.display = 'block';
+    window.location.hash='validation';
+}
+
 function send_beercoins(){
     var send_button = document.getElementById('send-button');
     var email_from = document.getElementById('email-from').value;
@@ -42,6 +58,7 @@ function send_beercoins(){
                 JSON.parse(request.responseText);
                 send_button.innerHTML='Sent!';
                 send_error.innerHTML='';
+                show_success();
             } else {
               console.error('An error occurred during your request: ', request.status + ' ' + request.statusText);
                 send_error.innerHTML = 'Server error, try again...';
