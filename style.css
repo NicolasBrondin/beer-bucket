@@ -66,6 +66,11 @@ a {
         0% {background-position: 0% 0%  }
         100% {background-position: 1000% 0%  }
     }
+
+@keyframes emails{
+        0% {background-position: 0% 0%  }
+        100% {background-position: -1000% 1000%  }
+    }
 @keyframes tours{
         0% {background-position: 0% 0%  }
         100% {background-position: -1000% 0%  }
@@ -143,6 +148,7 @@ section {
     box-sizing: border-box;
     position: relative;
     padding: 100px;
+    overflow-x: hidden;
 }
 
 section#jumbo{
@@ -489,7 +495,7 @@ p a{
     display: inline-block;
     animation-name: sending;
     animation-duration: 5s;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
     margin-left: calc( -100% - 400px);
 }
 
@@ -517,7 +523,7 @@ p a{
     left: 21px;
     animation-name: slipping;
     animation-duration: 5s;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
 }
 
 .email-back {
@@ -528,6 +534,17 @@ p a{
     background-repeat: no-repeat;
     width:100%;
     height:152px;
+}
+
+section#validation {
+    background: #2ecc71;
+    background-image: url('emails.png');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation-name: emails;
+    animation-duration: 600s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 @media (max-width:1024px) and (min-width:801px){
