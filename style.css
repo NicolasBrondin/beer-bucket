@@ -13,7 +13,6 @@ a {
 
 #beer-bucket {
         display: inline-block;
-    margin-top: 250px;
     }
 
 #glass {
@@ -546,6 +545,11 @@ section#validation {
     animation-duration: 600s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+section#validated {
+    display: none;
+    background-color: #34495e;
 }
 
 @media (max-width:1024px) and (min-width:801px){
