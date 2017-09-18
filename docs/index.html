@@ -11,7 +11,7 @@
                  
         </section>
         <section id="jumbo">
-            <img id="logo" src="logo.png" height="100"/>
+            <img id="logo" src="logo.png"/>
             <div class="coin"></div>
             <h1>Wanna <span class="text-red"><a href="#send">thanks</a></span> someone who helped you with a <span class="text-red"><a href="#definition">BeerCoin</a></span>? 
                 <br><strong>You're at the right place!</strong></h1>
@@ -44,6 +44,33 @@
             <button id="send-button" class="send" onclick="send_beercoins()">Send</button>
             <p id="send-error" class="text-red"></p>
         </section>
+        <section id="validation">
+             <h1>Complete your transaction!</h1>
+            <div class="email-wrapper">
+                <div class="email-back"></div>
+                <div class="email-paper"></div>
+                <div class="email-front"></div>
+            </div>
+            <h2>We sent you an email, please click on the link inside to validate the transaction <span class="text-red">♥</span></h2>
+            
+            <h2><strong onclick="show_form();">Click here to send more BeerCoins</strong></h2>
+        </section>
+        <section id="validated">
+            <h1>Transaction completed!</h1>
+            <div id="beer-bucket">
+                <div class="coin animated"></div>
+                <div id="glass">
+                    <div id="liquid-container">
+                        <div id="liquid">
+                            <div id="bubble"></div>
+                            <div id="beer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Your friend will be notified by email soon...</h2>
+            <h2><strong onclick="show_form();">Send more?</strong></h2>
+        </section>
         <div class="separator"></div>
         <section id="definition">
             <h1><strong>FAQ</strong></h1>
@@ -63,21 +90,7 @@
         <footer>
             Made in Loire Valley with <span class="text-red">♥</span> © BeerBucket 2017
         </footer>
-        <!--
-        <section >
-            <div id="beer-bucket">
-                <div class="coin animated"></div>
-                <div id="glass">
-                    <div id="liquid-container">
-                        <div id="liquid">
-                            <div id="bubble"></div>
-                            <div id="beer"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
+        
         <script type="text/javascript" src="app.js"></script>
     </body>
 </html>

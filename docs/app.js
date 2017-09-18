@@ -3,6 +3,7 @@ if (Object.hasOwnProperty.call(window, "ActiveXObject") && !window.ActiveXObject
     document.getElementById('ie').style.display = 'block';
 }
 
+
 var count = 1;
 function add_coin(){
     if(count < 5){
@@ -20,6 +21,31 @@ function remove_coin(){
         document.getElementById('coins').removeChild(document.querySelector('#send .coin'));
         document.getElementById('beercoin_count').innerHTML = count;
     }
+}
+
+function show_form(){
+    document.getElementById('validation').style.display = 'none';
+    document.getElementById('validated').style.display = 'none';
+    document.getElementById('send').style.display = 'block';
+    var send_button = document.getElementById('send-button').innerHTML = 'Send';
+    var email_from = document.getElementById('email-from').value = "";
+    var email_to = document.getElementById('email-to').value = "";
+    window.location.hash='send';
+}
+
+function show_success(){
+    
+    document.getElementById('send').style.display = 'none';
+    document.getElementById('validation').style.display = 'block';
+    window.location.hash='validation';
+}
+
+function show_validated(){
+    
+    document.getElementById('send').style.display = 'none';
+    document.getElementById('validation').style.display = 'none';
+    document.getElementById('validated').style.display = 'block';
+    window.location.hash='validated';
 }
 
 function send_beercoins(){
@@ -42,6 +68,7 @@ function send_beercoins(){
                 JSON.parse(request.responseText);
                 send_button.innerHTML='Sent!';
                 send_error.innerHTML='';
+                show_success();
             } else {
               console.error('An error occurred during your request: ', request.status + ' ' + request.statusText);
                 send_error.innerHTML = 'Server error, try again...';
@@ -57,4 +84,8 @@ function send_beercoins(){
     } else {
         send_error.innerHTML = 'Two email addresses must be filled!';
     }
+}
+
+if(window.location.href.indexOf('token') > -1){
+    show_validated();
 }
