@@ -76,8 +76,8 @@ function send_beercoins(){
           }
         }
     
-    //request.open('Post', 'https://beer-bucket-api.herokuapp.com/beercoins', true);
-    request.open('Post', 'http://localhost:3000/beercoins', true);
+    //request.open('Post', 'https://beer-bucket-api.herokuapp.com/transactions', true);
+    request.open('Post', 'http://localhost:3000/transactions', true);
     //request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     request.send(JSON.stringify(data));
         
