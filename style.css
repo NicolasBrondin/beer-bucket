@@ -70,6 +70,11 @@ a {
         0% {background-position: 0% 0%  }
         100% {background-position: -1000% 1000%  }
     }
+
+@keyframes wallets{
+        0% {background-position: 0% 0%  }
+        100% {background-position: 1000% -1000%  }
+    }
 @keyframes tours{
         0% {background-position: 0% 0%  }
         100% {background-position: -1000% 0%  }
@@ -542,6 +547,18 @@ section#validation {
     background-repeat: repeat;
     background-size: 200px 200px;
     animation-name: emails;
+    animation-duration: 600s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+section#wallet {
+    //display: none;
+    background: #3498db;
+    background-image: url('wallet.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation-name: wallets;
     animation-duration: 600s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
