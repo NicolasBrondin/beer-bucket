@@ -70,6 +70,11 @@ a {
         0% {background-position: 0% 0%  }
         100% {background-position: -1000% 1000%  }
     }
+
+@keyframes wallets{
+        0% {background-position: 0% 0%  }
+        100% {background-position: 1000% -1000%  }
+    }
 @keyframes tours{
         0% {background-position: 0% 0%  }
         100% {background-position: -1000% 0%  }
@@ -89,7 +94,7 @@ a {
 #beer {
    height: calc(100% - 40px);
   width: 100%;
-    background: url('beer.png');
+    background: url('../img/beer.png');
     background-repeat: repeat;
     background-size: 150px 150px;
   //background-color: #FFB241;
@@ -120,7 +125,7 @@ a {
     .coin{
         width:50px;
         height:63px;
-        background: url('coin.png') 0% 0% /100% 100%;
+        background: url('../img/coin.png') 0% 0% /100% 100%;
         position: relative;
         
         border:none;
@@ -151,7 +156,7 @@ section {
 }
 
 section#jumbo{
-    background: url('back.png');
+    background: url('../img/back.png');
     background-repeat: repeat;
     background-size: 300px 300px;
   //background-color: #FFB241;
@@ -168,7 +173,7 @@ padding-top:50px;
 
 
 section#send{
-    background: url('chop.png');
+    background: url('../img/chop.png');
     background-repeat: repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -226,7 +231,7 @@ section h2{
 }
 
 section#definition{
-    background: #e74c3c url('coins.png');
+    background: #e74c3c url('../img/coins.png');
     background-repeat: repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -376,7 +381,7 @@ footer {
     font-size:20px;
     color: white;
     font-weight: 200;
-    background: url('tours.png');
+    background: url('../img/tours.png');
     background-repeat: repeat;
     background-position: center top;
     background-attachment: fixed;
@@ -388,7 +393,8 @@ footer {
 }
 
 .separator {
-    height: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px;
     background: white;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
     position: relative;
@@ -501,7 +507,7 @@ p a{
 .email-front {
     position: absolute;
     z-index: 3;
-    background-image: url('mail-front.png');
+    background-image: url('../img/mail-front.png');
     background-size: 100% auto;
     background-repeat: no-repeat;
     width:100%;
@@ -513,7 +519,7 @@ p a{
 .email-paper {
     position: absolute;
     z-index: 2;
-    background-image: url('mail-paper.png');
+    background-image: url('../img/mail-paper.png');
     background-size: 100% auto;
     background-repeat: no-repeat;
     width: 157px;
@@ -528,7 +534,7 @@ p a{
 .email-back {
     position: absolute;
     z-index: 1;
-    background-image: url('mail-back.png');
+    background-image: url('../img/mail-back.png');
     background-size: 100% auto;
     background-repeat: no-repeat;
     width:100%;
@@ -538,7 +544,7 @@ p a{
 section#validation {
     display: none;
     background: #2ecc71;
-    background-image: url('emails.png');
+    background-image: url('../img/emails.png');
     background-repeat: repeat;
     background-size: 200px 200px;
     animation-name: emails;
@@ -547,16 +553,42 @@ section#validation {
     animation-timing-function: linear;
 }
 
+section#wallet {
+    display: none;
+    background: #3498db;
+    background-image: url('../img/wallet.png');
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation-name: wallets;
+    animation-duration: 600s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#wallet-separator{
+    display: none;
+}
+
 section#validated {
     display: none;
     background-color: #34495e;
 }
 
+ul li {
+    list-style-type: none;
+color: white;
+font-weight: 300;
+font-size: 20px;
+}
+
+#coins {
+        width: 500px;
+    }
 @media (max-width:1024px) and (min-width:801px){
         
     
 section#jumbo{
-    background: url('back.png');
+    background: url('../img/back.png');
     background-repeat: repeat;
     background-size: 300px 300px;
     animation-name: bubbles;
@@ -609,7 +641,7 @@ width: 21px;
 @media (max-width:800px){
     
 section#jumbo{
-    background: url('back.png');
+    background: url('../img/back.png');
     background-repeat: repeat;
     background-size: 300px 300px;
     animation-name: bubbles;
@@ -656,4 +688,24 @@ width: 10px;
     animation-timing-function: linear;
 }
 
+    section {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:100px;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+}
+    
+    input[type="text"]{
+        width: 300px;
+    }
+    
+    #coins {
+        width: 305px;
+    }
+    
 }
