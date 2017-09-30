@@ -554,7 +554,7 @@ section#validation {
 }
 
 section#wallet {
-    //display: none;
+    display: none;
     background: #3498db;
     background-image: url('wallet.png');
     background-repeat: repeat;
@@ -563,6 +563,10 @@ section#wallet {
     animation-duration: 600s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+#wallet-separator{
+    display: none;
 }
 
 section#validated {
@@ -577,6 +581,9 @@ font-weight: 300;
 font-size: 20px;
 }
 
+#coins {
+        width: 500px;
+    }
 @media (max-width:1024px) and (min-width:801px){
         
     
@@ -681,4 +688,24 @@ width: 10px;
     animation-timing-function: linear;
 }
 
+    section {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:100px;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+}
+    
+    input[type="text"]{
+        width: 300px;
+    }
+    
+    #coins {
+        width: 305px;
+    }
+    
 }
