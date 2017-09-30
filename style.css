@@ -393,7 +393,8 @@ footer {
 }
 
 .separator {
-    height: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px;
     background: white;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
     position: relative;
