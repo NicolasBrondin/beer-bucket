@@ -570,6 +570,13 @@ section#validated {
     background-color: #34495e;
 }
 
+ul li {
+    list-style-type: none;
+color: white;
+font-weight: 300;
+font-size: 20px;
+}
+
 @media (max-width:1024px) and (min-width:801px){
         
     

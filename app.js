@@ -112,9 +112,9 @@ function get_wallet(){
                     s += t.count;
                     var p = document.createElement('p');
                     p.innerHTML = t.count+" received from "+t.email_from;
-                    var p2 = document.createElement('p');
+                    var p2 = document.createElement('ul');
                     p2.innerHTML = t.beercoins.reduce(function(ss,b){
-                        ss += "# "+b+" #";
+                        ss += "<li> "+b+" </li>";
                         return ss; 
                     },"");
                     document.getElementById('transaction-list').appendChild(p);
