@@ -136,11 +136,10 @@ function get_wallet(){
         wallet_error.innerHTML = 'Wallet not found !';
     }
 }
-document.addEventListener('ready', function(){
+
     if(window.location.href.indexOf('validated') > -1){
     show_validated();
 } else if(window.location.href.indexOf('wallet') > -1) {
     get_wallet();
 }
-});
 
