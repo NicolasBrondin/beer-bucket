@@ -584,6 +584,11 @@ font-size: 20px;
 #coins {
         width: 500px;
     }
+
+.keywords {
+    opacity: 0;
+    visibility: hidden;
+}
 @media (max-width:1024px) and (min-width:801px){
         
     
