@@ -588,6 +588,8 @@ font-size: 20px;
 .keywords {
     opacity: 0;
     visibility: hidden;
+    display: inline-block;
+    height: 0;
 }
 @media (max-width:1024px) and (min-width:801px){
         
